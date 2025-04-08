@@ -1,0 +1,13 @@
+-c core_requirements.txt
+
+aiosmtpd
+alembic
+black
+fastapi-debug-toolbar
+isort
+jupyter-dash
+jupyterlab
+jupyterlab-code-formatter
+pylint
+pre-commit
+ruff
