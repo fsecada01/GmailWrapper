@@ -101,13 +101,8 @@ dependencies = [
 [dependency-groups]
 dev = [
     "aiosmtpd>=1.4.6",
-    "alembic>=1.15.2",
     "black>=25.1.0",
-    "fastapi-debug-toolbar>=0.6.3",
     "isort>=6.0.1",
-    "jupyter-dash>=0.4.2",
-    "jupyterlab>=4.4.0",
-    "jupyterlab-code-formatter>=3.0.2",
     "pre-commit>=4.2.0",
     "pylint>=3.3.6",
     "ruff>=0.11.4",

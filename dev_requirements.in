@@ -1,7 +1,6 @@
 -c core_requirements.txt
 
 aiosmtpd
-alembic
 black
 isort
 pylint
