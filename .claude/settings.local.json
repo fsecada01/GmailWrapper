@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ruff check:*)",
+      "Bash(black:*)",
+      "Bash(binpy_update.bat)",
+      "Bash(cmd /c:*)",
+      "Bash(py_update.bat)",
+      "Bash(uv pip install:*)",
+      "Bash(uv pip compile:*)",
+      "Bash(uv add:*)",
+      "Bash(uv pip sync:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -54,58 +54,61 @@ profile = "black"
 line_length = 80
 
 [project]
-name = "gmail_wrapper"
+name = "gmailwrapper"
 authors = [
     { name="Francis Secada", email="francis.secada@gmail.com" },
 ]
+description = "A modern, async-first Python library for seamless Gmail API integration"
 readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["gmail", "email", "api", "async", "google"]
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: Email",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
 ]
-version = "1.0.0b0"
+version = "0.0.2"
 dependencies = [
-    "anyio==4.9.0",
-    "cachetools==5.5.2",
-    "certifi==2025.4.26",
-    "charset-normalizer==3.4.2",
-    "colorama==0.4.6",
-    "google-api-core==2.24.2",
-    "google-api-python-client==2.169.0",
-    "google-auth-httplib2==0.2.0",
-    "google-auth-oauthlib==1.2.2",
-    "google-auth==2.40.1",
-    "googleapis-common-protos==1.70.0",
-    "h11==0.16.0",
-    "httpcore==1.0.9",
-    "httplib2==0.22.0",
-    "httpx==0.28.1",
-    "idna==3.10",
-    "loguru==0.7.3",
-    "oauthlib==3.2.2",
-    "proto-plus==1.26.1",
-    "protobuf==6.31.0",
-    "pyasn1-modules==0.4.2",
-    "pyasn1==0.6.1",
-    "pyparsing==3.2.3",
-    "requests-oauthlib==2.0.0",
-    "requests==2.32.3",
-    "rsa==4.9.1",
-    "sniffio==1.3.1",
-    "uritemplate==4.1.1",
-    "urllib3==2.4.0",
-    "win32-setctime==1.2.0",
+    "google-api-python-client>=2.169.0",
+    "google-auth-httplib2>=0.2.0",
+    "google-auth-oauthlib>=1.2.2",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
 ]
+
+[project.urls]
+Homepage = "https://github.com/fsecada01/GmailWrapper"
+Repository = "https://github.com/fsecada01/GmailWrapper.git"
+Issues = "https://github.com/fsecada01/GmailWrapper/issues"
+Changelog = "https://github.com/fsecada01/GmailWrapper/releases"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["gmailwrapper*"]
+
+[tool.setuptools.package-data]
+gmailwrapper = ["py.typed"]
 
 [dependency-groups]
 dev = [
     "aiosmtpd>=1.4.6",
     "black>=25.1.0",
     "isort>=6.0.1",
-    "pre-commit>=4.2.0",
-    "pylint>=3.3.6",
-    "ruff>=0.11.4",
+    "pre-commit>=4.3.0",
+    "pylint>=3.3.8",
+    "ruff>=0.12.11",
 ]
-
-packages = ['gmail_wrapper']
