@@ -205,8 +205,14 @@ class BaseGmailResource:
         Returns:
             list[dict[str, Any]]: List of detailed resources
         """
-        resources = await self.get_all(
-            endpoint, list_key, params=params, headers=headers
+        # Call the base implementation explicitly (not `self.get_all`):
+        # subclasses (drafts/messages/threads) override `get_all` with a
+        # different public signature `(params, headers, details)` that
+        # dispatches back here when `details=True`, so polymorphic
+        # dispatch would recurse into the wrong signature and raise
+        # "got multiple values for argument 'params'".
+        resources = await BaseGmailResource.get_all(
+            self, endpoint, list_key, params=params, headers=headers
         )
 
         if not resources:
